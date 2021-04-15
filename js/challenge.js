@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
     const restart = document.createElement('button');
     restart.id = 'restart';
     restart.innerText = 'restart';
-    document.querySelector
+    document.querySelector('pause').
     
 });
 
