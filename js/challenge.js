@@ -87,7 +87,7 @@ function handleBtns(e) {
   if (id == 'restart') {
     ctr = 0;
     startIteration();
-    changeDisabledNodeArray(true, btns);
+    changeDisabledNodeArray(false, btns);
   }
 }
 
