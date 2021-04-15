@@ -11,7 +11,8 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function postComment(e) {
-  cont data = new DataO
+  cont data = new FormData(e.target);
+  
 }
 
 function addCtr(amount) {
