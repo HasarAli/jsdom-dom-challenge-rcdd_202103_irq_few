@@ -16,7 +16,7 @@ function postComment(e) {
   const comment = data.get('comment');
   const p = document.createElement('p');
   p.innerText = comment;
-  comments.append(p):
+  comments.append(p);
 }
 
 function addCtr(amount) {
