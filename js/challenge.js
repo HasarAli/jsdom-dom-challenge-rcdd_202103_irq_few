@@ -8,7 +8,12 @@ window.addEventListener('DOMContentLoaded', () => {
     startIteration();
     document.body.addEventListener('click', handleBtns);
     document.addEventListener('submit', postComment);
-    document.
+    
+    const restart = document.createElement('button');
+    restart.id = 'restart';
+    restart.innerText = 'restart';
+    document.querySelector
+    
 });
 
 function postComment(e) {
