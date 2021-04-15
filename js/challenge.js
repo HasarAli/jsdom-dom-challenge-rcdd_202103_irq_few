@@ -88,8 +88,8 @@ function handleBtns(e) {
     e.target.innerText = 'pause';
   }
   
-  if (id == 'restart') {
-    ctr = 0;
+  if (id === 'restart') {
+    addCtr(ctr * -1);
     startIteration();
     changeDisabledNodeArray(false, btns);
   }
