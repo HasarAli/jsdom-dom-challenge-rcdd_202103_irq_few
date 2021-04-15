@@ -6,9 +6,9 @@ const btns = document.querySelectorAll('button');
 
 window.addEventListener('DOMContentLoaded', () => {
     startIteration();
-    document.body.addEventListener('click', handleBtns)
-    
-    document.addEventListener('submit', postComment)
+    document.body.addEventListener('click', handleBtns);
+    document.addEventListener('submit', postComment);
+    document.
 });
 
 function postComment(e) {
