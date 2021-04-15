@@ -7,8 +7,12 @@ window.addEventListener('DOMContentLoaded', () => {
     startIteration();
     document.body.addEventListener('click', handleBtns)
     
-    document.
+    document.addEventListener('submit', postComment)
 });
+
+function postComment(e) {
+  cont data = new DataO
+}
 
 function addCtr(amount) {
   ctr = ctr + amount;
@@ -72,8 +76,8 @@ function handleBtns(e) {
   if (id == 'restart') {
     ctr = 0;
     startIteration();
+    changeDisabledNodeArray(true, btns);
   }
-  
 }
 
 function changeDisabledNodeArray(bool, nodeArr) {
