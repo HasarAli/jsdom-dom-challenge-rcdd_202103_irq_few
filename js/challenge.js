@@ -12,6 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function postComment(e) {
+  e.preventDefault();
   const data = new FormData(e.target);
   const comment = data.get('comment');
   const p = document.createElement('p');
