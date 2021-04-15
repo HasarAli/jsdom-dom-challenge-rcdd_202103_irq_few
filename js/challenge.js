@@ -74,5 +74,10 @@ function handleBtns(e) {
     e.target.innerText = 'pause';
   }
   
+}
+
+function disableNodeArray(nodeArr) {
+  nodeArr.forEach(node => node.disabled = true)
   
 }
+
