@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
 function postComment(e) {
   cont data = new FormData(e.target);
-  
+  data.get('')
 }
 
 function addCtr(amount) {
