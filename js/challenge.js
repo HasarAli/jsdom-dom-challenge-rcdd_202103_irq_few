@@ -1,5 +1,6 @@
 let ctr = 0;
 const counterNode = document.querySelector('#counter');
+const comments = document.querySelector('#')
 let iterId;
 const btns = document.querySelectorAll('button');
 
@@ -11,8 +12,11 @@ window.addEventListener('DOMContentLoaded', () => {
 });
 
 function postComment(e) {
-  cont data = new FormData(e.target);
-  data.get('')
+  const data = new FormData(e.target);
+  const comment = data.get('comment');
+  const li = document.createElement('li');
+  li.innerText = comment;
+  comments.append(li):
 }
 
 function addCtr(amount) {
