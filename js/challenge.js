@@ -14,8 +14,8 @@ window.addEventListener('DOMContentLoaded', () => {
 function postComment(e) {
   const data = new FormData(e.target);
   const comment = data.get('comment');
-  const li = document.createElement('li');
-  li.innerText = comment;
+  const p = document.createElement('p');
+  p.innerText = comment;
   comments.append(li):
 }
 
