@@ -5,16 +5,20 @@ let iterId;
 const btns = document.querySelectorAll('button');
 
 window.addEventListener('DOMContentLoaded', () => {
+    addRestartBtn();
+    
     startIteration();
     document.body.addEventListener('click', handleBtns);
     document.addEventListener('submit', postComment);
     
-    const restart = document.createElement('button');
-    restart.id = 'restart';
-    restart.innerText = 'restart';
-    document.querySelector('#pause').insertAdjacentElement("afterend", restart);
-    
 });
+
+function addRestartBtn() {
+  const restart = document.createElement('button');
+  restart.id = 'restart';
+  restart.innerText = 'restart';
+  document.querySelector('#pause').insertAdjacentElement("afterend", restart);
+}
 
 function postComment(e) {
   e.preventDefault();
