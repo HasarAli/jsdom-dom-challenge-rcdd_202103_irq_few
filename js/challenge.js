@@ -4,7 +4,7 @@ let iterId;
 const btns = document.querySelectorAll('button');
 
 window.addEventListener('DOMContentLoaded', () => {
-    iterId = startIteration();
+    startIteration();
     document.body.addEventListener('click', handleBtns)
     
     document.
@@ -16,11 +16,11 @@ function addCtr(amount) {
 }
 
 function startIteration() {
-  return window.setInterval(addCtr, 2*1000, 1);
+  iterId = window.setInterval(addCtr, 2*1000, 1);
 }
 
-function stopIteration(id) {
-  window.clearInterval(id);
+function stopIteration() {
+  window.clearInterval(iterId);
 }
 
 const liked = [];
@@ -49,12 +49,10 @@ function handleBtns(e) {
   
   if (id === 'pause') {
     stopIteration(iterId);
-    btns.forEach(btn => {
-      if (btn.id === id)
-        return;
-      
-      btn.disabled = true;
-    })
+    
+    changeDisabledNodeArray(true, btns);
+    e.target.disabled = false;
+    
     e.target.id = 'resume';
     e.target.value = 'resume';
     e.target.innerText = 'resume';
@@ -63,21 +61,21 @@ function handleBtns(e) {
   
   if (id === 'resume') {
     iterId = startIteration();
-    btns.forEach(btn => {
-      if (btn.id === id)
-        return;
-      
-      btn.disabled = false;
-    })
+    
+    changeDisabledNodeArray(false, btns);
+    
     e.target.id = 'pause';
     e.target.value = 'pause';
     e.target.innerText = 'pause';
   }
   
-}
-
-function disableNodeArray(nodeArr) {
-  nodeArr.forEach(node => node.disabled = true)
+  if (id == 'restart') {
+    ctr = 0;
+    startIteration();
+  }
   
 }
 
+function changeDisabledNodeArray(bool, nodeArr) {
+  nodeArr.forEach(node => node.disabled = bool);
+}
